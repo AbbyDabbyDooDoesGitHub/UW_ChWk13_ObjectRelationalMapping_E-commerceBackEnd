@@ -14,31 +14,41 @@ Product.init(
       // Integer
       type: DataTypes.INTEGER,
       // Doesn't allow null values.
+      allowNull: false,
       // Set as primary key.
+      primaryKey: true,
       // Uses auto increment.
+      autoIncrement: true
     },
 
     product_name: {
       // String
+      type: DataTypes.STRING,
       // Doesn't allow null values.
+      allowNull: false,
     },
 
     price: {
       // Decimal.
+      type: DataTypes.DECIMAL,
       // Doesn't allow null values.
-      // Validates that the value is a decimal.
+      allowNull: false,
+      //! Validates that the value is a decimal.
     },
 
     stock: {
       // Integer.
+      type: DataTypes.INTEGER,
       // Doesn't allow null values.
-      // Set a default value of 10.
-      // Validates that the value is numeric.
+      allowNull: false,
+      //! Set a default value of 10.
+      //! Validates that the value is numeric.
     },
 
     category_id: {
       // Integer.
-      // References the Category model's id.
+      type: DataTypes.INTEGER,
+      //! References the Category model's id.
     },
 
   },
