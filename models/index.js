@@ -15,20 +15,21 @@ Product.belongsTo(Category,
 
 
 // Categories have many Products
-Category.hasMany(Product,
+Category.hasMany(Product, 
   {
-    foreignKey: "product_id",
-    as: "product"
-  } 
+    foreignKey: "category_id",
+    onDelete: "SET NULL",
+    as: "products"
+  }
 );
 
 
 // Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag, 
   {
-    foreignKey: "tag_id",
-    as: "tag"
-  } 
+    through: {model: ProductTag},
+    as: "tags"
+  }
 );
 
 
@@ -36,13 +37,14 @@ Product.belongsToMany(Tag,
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product,
   {
-    foreignKey: "product_id",
-    as: "product"
-  } 
+    through: {model: ProductTag},
+    as: "products"
+  }
 );
 
 
 
+// INCLUDED
 module.exports = {
   Product,
   Category,
