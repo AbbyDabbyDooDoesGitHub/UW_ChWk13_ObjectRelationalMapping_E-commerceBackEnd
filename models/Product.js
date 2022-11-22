@@ -36,7 +36,10 @@ Product.init(
       type: DataTypes.DECIMAL,
       // Doesn't allow null values.
       allowNull: false,
-      //! Validates that the value is a decimal.
+      // Validates that the value is a decimal.
+      validate: {
+        isDecimal: true,
+      }
     },
 
     stock: {
@@ -57,7 +60,8 @@ Product.init(
       type: DataTypes.INTEGER,
       //! References the Category model's id.
       references: {
-
+        model: "category",
+        key: "id"
       }
     },
 
