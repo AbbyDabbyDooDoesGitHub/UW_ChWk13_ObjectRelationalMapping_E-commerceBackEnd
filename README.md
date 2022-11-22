@@ -1,4 +1,4 @@
-# TO-DO
+<!-- # TO-DO
 
 - Execute association methods on the Sequelize models to create relationships
    - Make sure you set up foreign key relationships that match the column we created in the respective models.
@@ -6,17 +6,15 @@
 - Fill out the unfinished CRUD operatiion routes in 
   - `product-routes.js`
   - `tag-routes.js`
-  - `category-routes.js`
+  - `category-routes.js` -->
   <!-- - Note that the functionality for creating the many-to-many relationship for products has already been completed for you. -->
-> **Hint**: Be sure to look at the mini-project code for syntax help and use your model's column definitions to figure out what `req.body` will be for POST and PUT routes!
+<!-- > **Hint**: Be sure to look at the mini-project code for syntax help and use your model's column definitions to figure out what `req.body` will be for POST and PUT routes!
 - Seed the Database after creating the models and routes
   - run `npm run seed` to seed data to your database so that you can test your routes.
 - Sync Sequelize to the Database on Server Start
-  - create the code needed in `server.js` to sync the Sequelize models to the MySQL database on server start.
+  - create the code needed in `server.js` to sync the Sequelize models to the MySQL database on server start. -->
 
-
-
-
+<!--! Fix .env file and upload walkthrough -->
 
 # UW_ChWk13_ObjectRelationalMapping_E-commerceBackEnd
 ## Overview
